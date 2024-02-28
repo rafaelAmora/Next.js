@@ -31,7 +31,7 @@ const Static: NextPage = () => {
         </Col>
 
         <Col>
-          <h3>Gerado no cliente: {clientSideData?.timestamp}</h3>
+          <h3>Gerado no cliente: {clientSideData?.timestamp.toDateString()}</h3>
         </Col>
       </Row>
     </Container>
