@@ -37,26 +37,25 @@ const Dynamic: NextPage  = (props : {
   }
 
    return (
-    <Container tag="main">
-      <h1 className="my-5">
-        Como funcionam as renderizações do Next.js
-      </h1>
+     <Container tag="main">
+       <h1 className="my-5">Como funcionam as renderizações do Next.js</h1>
 
-      <Row>
-        <Col>
-          <h3>
-            Gerado no servidor: {props.serverSideData?.timestamp}
-          </h3>
-        </Col>
+       <Row>
+         <Col>
+           <h3>
+             Gerado no servidor:{" "}
+             {props.serverSideData?.timestamp.toDateString()}
+           </h3>
+         </Col>
 
-        <Col>
-          <h3>
-            Gerado no cliente: {clientSideData?.timestamp}
-          </h3>
-        </Col>
-      </Row>
-    </Container>
-  )
+         <Col>
+           <h3>
+             Gerado no cliente: {clientSideData?.timestamp.toDateString()}
+           </h3>
+         </Col>
+       </Row>
+     </Container>
+   )
 }
 
 export default Dynamic
